@@ -1,48 +1,68 @@
-# Wordpress - ignore core, configuration, examples, uploads and logs.
-# https://github.com/github/gitignore/blob/main/WordPress.gitignore
+# This file contains a list of files and folders to be ignored when
+# committing to a git repository.  Ignored files are both Slate project
+# specific files as well as commonly ignored files on any project.
 
-# Core
-#
-# Note: if you want to stage/commit WP core files
-# you can delete this whole section/until Configuration.
-/wp-admin/
-/wp-content/index.php
-/wp-content/languages
-/wp-content/plugins/index.php
-/wp-content/themes/index.php
-/wp-includes/
-/index.php
-/license.txt
-/readme.html
-/wp-*.php
-/xmlrpc.php
+# For more information on this .gitignore files, see GitHub's
+# documentation: https://help.github.com/articles/ignoring-files/
 
-# Configuration
-wp-config.php
+# Project #
+###################
+node_modules
+dist
+upload
+deploy.log
+config/shopify.yml
+npm-debug.log
+.env
+.env.*
+*.toml
 
-# Example themes
-/wp-content/themes/twenty*/
 
-# Example plugin
-/wp-content/plugins/hello.php
+# Compiled source #
+###################
+*.com
+*.class
+*.dll
+*.exe
+*.o
+*.so
 
-# Uploads
-/wp-content/uploads/
+# Packages #
+############
+# it's better to unpack these files and commit the raw source
+# git has its own built in compression methods
+*.7z
+*.dmg
+*.gz
+*.iso
+*.jar
+*.rar
+*.tar
+*.zip
 
-# Log files
+# Logs and databases #
+######################
 *.log
+*.sql
+*.sqlite
 
-# htaccess
-/.htaccess
+# OS generated files #
+######################
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
 
-# All plugins
-#
-# Note: If you wish to whitelist plugins,
-# uncomment the next line
-#/wp-content/plugins
-
-# All themes
-#
-# Note: If you wish to whitelist themes,
-# uncomment the next line
-#/wp-content/themes
+# Custom #
+######################
+*.sass-cache*
+.cache/*
+_site
+/.idea
+/.vscode
+secrets.json
+.jekyll-metadata
+.ruby-version
